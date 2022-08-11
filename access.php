@@ -320,7 +320,7 @@ $type      = $info->loggedInUser->info->type;
             <div class="pg-modal small">
                 <div class="content">
                     <?php $employeeType=$info->searchedUser->coupa->employeeType;
-                    if($employeeType == 'Non-Emp'){
+                    if(!isset($employeeType) || $employeeType == 'Non-Emp'){
                         $employee_type="non-employees";
                     } ?>
                     <div class="padding-15">
